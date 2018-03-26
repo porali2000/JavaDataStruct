@@ -1106,16 +1106,44 @@ public class ArrayGeek {
     @Test
     public void testRepeated3() {
         String[] str = {"a", "a"};
+        String[] str1 = {"a", "a", "b", "b", "b", "b"};
+        String[] str2 = {"a", "a", "a", "a", "b", "b"};
+        String[] str3 = {"a", "a", "a", "b", "b", "b"};
+
+        testRepe(str);
+        testRepe(str1);
+        testRepe(str2);
+        testRepe(str3);
+
+    }
+
+    private void testRepe(String[] str) {
 
         Set<String> set = new HashSet<>();
+        Map<String, Integer> map = new HashMap<>();
 
         for (String x: str) {
             if (set.contains(x)) {
-
+               map.put(x, (map.containsKey(x)) ? map.get(x) + 1 : 1);
             } else {
                 set.add(x);
             }
         }
+
+        int max = 0;
+        Set<String> set2 = new HashSet<>();
+        for (String x: set) {
+            if (map.get(x) > max) {
+                max = map.get(x);
+                set2.clear();
+                set2.add(x);
+            }
+            if (map.get(x) == max) {
+                set2.add(x);
+            }
+        }
+
+        System.out.println(set2);
     }
 }
 
