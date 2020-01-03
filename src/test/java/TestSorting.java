@@ -1,4 +1,3 @@
-import com.sun.org.apache.xpath.internal.SourceTree;
 import org.junit.Assert;
 import org.junit.Test;
 
