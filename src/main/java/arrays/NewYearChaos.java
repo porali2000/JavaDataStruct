@@ -7,21 +7,28 @@ import java.util.Set;
 
 public class NewYearChaos {
     static Set<Person> newYearLine = new HashSet<>();
+    static int n = 5;
+    static int[] array = {2, 1, 5, 3, 4};
+    static int [] bribeDetails = new int[n];
 
     public static void main(String[] args) {
-        int[] array = {2, 1, 5, 3, 4};
+
         print(array);
         bribe(array, 2, 4);
+        bribe(array, 2, 4);
+        bribe(array, 2, 4);
         print(array);
+        print(bribeDetails);
     }
 
     static void bribe(int[] array, int from, int to) {
         int p1 = 0;
         while (p1 < array.length && from < array.length && to < array.length) {
-            if (p1 == from) {
+            if (p1 == from && bribeDetails[from] < 2) {
                 int t1 = array[to];
                 array[to] = array[from];
                 array[from] = t1;
+                bribeDetails[from] ++;
             }
             p1++;
         }
