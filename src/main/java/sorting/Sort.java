@@ -1,5 +1,7 @@
 package sorting;
 
+import static org.junit.Assert.assertArrayEquals;
+
 abstract class Sort {
 
         public static int[] given = {5, 4, 3, 2,1, 0, -1, -2, -3};
@@ -20,5 +22,9 @@ abstract class Sort {
         int i = 0;
         int j = 0;
         return toSort;
+    }
+
+    public static void assertResult(int[] result){
+        assertArrayEquals(expected, result);
     }
 }

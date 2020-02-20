@@ -6,7 +6,7 @@ public class MergeSort extends Sort {
     public static void main(String[] args) {
         int[] result = split(given);
         print(result);
-        assertArrayEquals(expected, result);
+        assertResult(result);
     }
 
     public static int[] sort(int[] toSort) {
