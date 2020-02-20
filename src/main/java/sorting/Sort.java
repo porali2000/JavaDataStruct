@@ -3,7 +3,7 @@ package sorting;
 abstract class Sort {
 
         public static int[] given = {5, 4, 3, 2,1, 0, -1, -2, -3};
-        public  static int[] expected = {1,2,3,-1,5,-6,7,8,0};
+        public  static int[] expected = {-3,-2,-1,0,1,2,3,4,5};
 
     public static void print(int[] toPrint){
         int i = toPrint.length;

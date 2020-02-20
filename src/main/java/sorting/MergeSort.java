@@ -1,8 +1,12 @@
 package sorting;
 
+import static org.junit.Assert.assertArrayEquals;
+
 public class MergeSort extends Sort {
     public static void main(String[] args) {
-        print(split( given));
+        int[] result = split(given);
+        print(result);
+        assertArrayEquals(expected, result);
     }
 
     public static int[] sort(int[] toSort) {
